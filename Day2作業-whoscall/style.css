@@ -415,7 +415,7 @@ footer{
 }
 .topright{
     width: 215px;
-    height: 178px;
+    /* height: 178px; */
     margin-left: 650px;
     margin-top: 20px;
     color: white;
