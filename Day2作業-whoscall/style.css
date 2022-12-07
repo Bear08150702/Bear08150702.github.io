@@ -454,11 +454,22 @@ footer{
     color: gray;
 }
 .underlefttext{
-    margin: 11px;
+    margin-right: 11px;
     color: gray;
 }
 .underlefta{
     width: 171px;
     display: flex;
     justify-content: space-between;
+}
+.underrighttext{
+    width: 160px;
+}
+select{
+    width: 160px;
+    height: 43px;
+    background-color: rgb(84, 82, 82);
+    color: white;
+    font-size: 20px;
+    padding-left: 40px;
 }
