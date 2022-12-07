@@ -1,5 +1,5 @@
 .big{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     position: fixed;
     background-color: white;
@@ -11,12 +11,19 @@
 .big a{
     margin-right: 15px;
     text-decoration: none;
-    color: black;
+    
 }
 .b1 a{
     margin-left: 40px;
     color: rgb(27, 212, 27);
     font-size: 30px;
+}
+.big-middle{
+    display: flex;
+    margin-right: auto;
+}
+.big-middle a{
+    color: black;
 }
 .b7
 {
@@ -30,6 +37,7 @@
     font-size: 20px;
     /* justify-content: center; */
     text-align: center;
+    margin-right: 50px;
 }
 .b7 a{
     color: white;
