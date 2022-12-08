@@ -34,9 +34,7 @@
     border-radius: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* display: flex; */
     font-size: 20px;
-    /* justify-content: center; */
     text-align: center;
     margin-right: 50px;
 }
@@ -53,17 +51,11 @@
     display: flex;
     position: relative;
 }
-/* .small+img{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-} */
 .omiddle{
     width: 948px;
     height: 320px;
     margin: 280px 70px 120px ;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: left;
     line-height: 70px;
 }
@@ -279,8 +271,6 @@
     border: 1px solid rgb(181, 178, 178);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
-    margin: 12px;
     padding: 30px;
     position: relative;
 }
@@ -291,7 +281,6 @@
 }
 .nilefttext1{
     font-size: 26px;
-    /* margin: 20PX; */
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -306,7 +295,6 @@
     border: 1px solid rgb(181, 178, 178);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     margin: 12px;
     padding: 30px;
     position: relative;
@@ -328,11 +316,9 @@
 }
 .niright{
     width: 260px;
-    /* height: 274px; */
     border: 1px solid rgb(181, 178, 178);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     margin: 12px;
     padding: 25px;
     position: relative;
@@ -504,7 +490,6 @@ footer{
 }
 .topright{
     width: 215px;
-    /* height: 178px; */
     margin-left: 650px;
     margin-top: 20px;
     color: white;
