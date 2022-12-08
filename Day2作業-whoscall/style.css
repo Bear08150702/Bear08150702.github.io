@@ -7,6 +7,7 @@
     top: 0px;
     z-index: 2;
     align-items: center;
+    box-shadow: 0 0 10px;
 }
 .big a{
     margin-right: 15px;
