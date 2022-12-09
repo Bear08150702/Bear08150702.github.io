@@ -78,12 +78,284 @@ body{
 .two-page{
     width: 960px;
 }
+.safety{
+    width: 355px;
+}
+.two-tittle{
+    color: white;
+    background-color: rgb(199, 0, 0);
+    display: flex;
+}
+.two-tittle p:nth-child(1){
+    writing-mode: vertical-lr;
+    font-size: 100px;
+}
+.two-tittle p:nth-child(2){
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two-text{
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+.two-text h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.two-untext{
+    font-size: 17px;
+    line-height: 25px;
+}
+.two-new{
+    width: 642px;
+    background-color: rgb(235, 235, 235);
+    line-height: 25px;
+    padding: 20px;
+}
+.two-new p:nth-child(1){
+    background-color:  rgb(235, 235, 235);
+    color: rgb(199, 0, 0);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.two-new span{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    font-weight: bolder;
+}
+.two-button{
+    width: 57px;
+    height: 36px;
+    background-color: rgb(199, 0, 0);
+    border-style: none;
+}
+.two-triangle{
+    width: 30px;
+    height: 26px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 50% 70%, 0% 90%);
+    margin: auto;
+}
+.two-gray{
+    width: 518px;
+    height: 413px;
+    background-color: rgb(236, 236, 236);
+}
 .three-page{
     width: 960px;
+}
+.comfortable{
+    width: 355px;
+}
+.three-tittle{
+    color: white;
+    background-color: rgb(199, 0, 0);
+    display: flex;
+}
+.three-tittle p:nth-child(1){
+    writing-mode: vertical-lr;
+    font-size: 100px;
+}
+.three-tittle p:nth-child(2){
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.three-text{
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+.three-text h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.three-untext{
+    font-size: 17px;
+    line-height: 25px;
+}
+.three-new{
+    width: 642px;
+    background-color: rgb(235, 235, 235);
+    line-height: 25px;
+    padding: 20px;
+}
+.three-new p:nth-child(1){
+    background-color:  rgb(235, 235, 235);
+    color: rgb(199, 0, 0);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.three-new span{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    font-weight: bolder;
+}
+.three-button{
+    width: 57px;
+    height: 36px;
+    background-color: rgb(199, 0, 0);
+    border-style: none;
+}
+.three-triangle{
+    width: 30px;
+    height: 26px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 50% 70%, 0% 90%);
+    margin: auto;
+}
+.three-gray{
+    width: 439px;
+    height: 290px;
+    background-color: rgb(236, 236, 236);
 }
 .four-page{
     width: 960px;
 }
+.people{
+    width: 355px;
+}
+.four-tittle{
+    color: white;
+    background-color: rgb(199, 0, 0);
+    display: flex;
+}
+.four-tittle p:nth-child(1){
+    writing-mode: vertical-lr;
+    font-size: 100px;
+}
+.four-tittle p:nth-child(2){
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.four-text{
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+.four-text h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.four-untext{
+    font-size: 17px;
+    line-height: 25px;
+}
+.four-new{
+    width: 642px;
+    background-color: rgb(235, 235, 235);
+    line-height: 25px;
+    padding: 20px;
+}
+.four-new p:nth-child(1){
+    background-color:  rgb(235, 235, 235);
+    color: rgb(199, 0, 0);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.four-new span{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    font-weight: bolder;
+}
+.four-button{
+    width: 57px;
+    height: 36px;
+    background-color: rgb(199, 0, 0);
+    border-style: none;
+}
+.four-triangle{
+    width: 30px;
+    height: 26px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 50% 70%, 0% 90%);
+    margin: auto;
+}
+.four-gray{
+    width: 518px;
+    height: 413px;
+    background-color: rgb(236, 236, 236);
+}
 .five-page{
     width: 960px;
+}
+.pride{
+    width: 355px;
+}
+.five-tittle{
+    color: white;
+    background-color: rgb(199, 0, 0);
+    display: flex;
+}
+.five-tittle p:nth-child(1){
+    writing-mode: vertical-lr;
+    font-size: 100px;
+}
+.five-tittle p:nth-child(2){
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.five-text{
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+.five-text h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.five-untext{
+    font-size: 17px;
+    line-height: 25px;
+}
+.five-new{
+    width: 642px;
+    background-color: rgb(235, 235, 235);
+    line-height: 25px;
+    padding: 20px;
+}
+.five-new p:nth-child(1){
+    background-color:  rgb(235, 235, 235);
+    color: rgb(199, 0, 0);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.five-new span{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    font-weight: bolder;
+}
+.five-button{
+    width: 57px;
+    height: 36px;
+    background-color: rgb(199, 0, 0);
+    border-style: none;
+}
+.five-triangle{
+    width: 30px;
+    height: 26px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 50% 70%, 0% 90%);
+    margin: auto;
+}
+.five-gray{
+    width: 439px;
+    height: 290px;
+    background-color: rgb(236, 236, 236);
 }
