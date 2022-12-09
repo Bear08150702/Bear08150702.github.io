@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+
+}
+body{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.one-page{
+    width: 960px;
+}
+.two-page{
+    width: 960px;
+}
+.three-page{
+    width: 960px;
+}
+.four-page{
+    width: 960px;
+}
+.five-page{
+    width: 960px;
+}
