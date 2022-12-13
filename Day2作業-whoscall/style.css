@@ -264,6 +264,7 @@
 .nine{
     display: flex;
     justify-content: center;
+    /* align-items: center; */
 }
 .nileft{
     width: 260px;
@@ -272,6 +273,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-top: 12px;
     position: relative;
 }
 .nileftimg2{
