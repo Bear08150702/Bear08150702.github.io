@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px;
+            /* outline: 1px solid pink; */
+            display: flex;
+        }
+        .img{
+            width: 100%;
+            display: flex;
+        }
+        .img img{
+            width: 100%;
+        } 
+        .text{
+            width: 100%;
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        @media screen and (min-width:768px){
+            .card{
+                width: calc(100% / 3 - 30px);
+                /* box-sizing: border-box; */
+                /* padding: 10px; */
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .card:nth-child(-n+2){
+                width: calc(100% / 2 - 30px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .img:nth-child(-n+2){
+                width: calc(100% / 2 - 20px);
+            }
+            .text:nth-child(-n+2){
+                width: calc(100% / 2 - 20px);
+            }
+
+            .card:nth-child(n+3){
+                width: calc(100% / 4 - 25px);
+                /* display: flex;
+                flex-direction: column;
+                align-items: center; */
+                position: relative;
+                overflow: hidden;
+            }
+            .card:nth-child(n+3) .img{
+                width: 100%;
+            }
+            .card:nth-child(n+3) .img img{
+                width: 100%;
+            }
+            .card:nth-child(n+3) .text{
+                width: calc(100% - 20px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=1">
+            </div>
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=2">
+            </div>    
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=3">
+            </div>
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=4">
+            </div>    
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=5">
+            </div>
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://picsum.photos/300/200/?random=6">
+            </div>
+            <div class="text">
+                <h3>tittle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur libero excepturi illum beatae, quo accusantium dolores aliquam laboriosam. Laboriosam commodi, aut quidem quam doloribus officia illum deserunt a non!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
