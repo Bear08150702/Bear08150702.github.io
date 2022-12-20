@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,53 +11,92 @@
         body {
             line-height: 1;
         }
-        .main-header{
+
+        .main-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            /* padding: 10px; */
             background-color: #9af;
             position: relative;
         }
-        .logo img{
+
+        .logo img {
             /* 處理圖片下面的空白處 */
             vertical-align: middle;
+            margin-left: 5px;
         }
-        .main-nav a{
+
+        .main-nav a {
             display: block;
             padding: 10px 20px;
             text-decoration: none;
             color: #333;
         }
-        #menu-control{
+
+        #menu-control {
             display: none;
         }
+
         /* 打勾盒子隱藏 */
-        #under-list-one{
+        #under-list-one,
+        #under-list-two,
+        #under-list-three,
+        #under-list-four,
+        #under-list-five,
+        #under-list-six {
             display: none;
         }
-        #under-list-two{
+
+        /* {
             display: none;
-        }
+        } */
         @media screen and (width < 1200px) {
-            .HB{
+            .HB {
                 width: 40px;
                 height: 40px;
-                background-color: #000;
+                /* background-color: #000; */
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
             }
-            
-            .HB span{
+
+            .HB .line1 {
+                transform-origin: 0% 0%;
+                transition: transform 0.4s ease-in-out;
+            }
+
+            .HB .line2 {
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .HB .line3 {
+                transform-origin: 0% 100%;
+                transition: transform 0.4s ease-in-out;
+            }
+
+            #menu-control:checked~.main-header .HB .line1 {
+                transform: rotate(41deg);
+            }
+
+            #menu-control:checked~.main-header .HB .line2 {
+                transform: scaleY(0);
+            }
+
+            #menu-control:checked~.main-header .HB .line3 {
+                transform: rotate(-41deg);
+            }
+
+            .HB span {
                 width: 80%;
                 height: 2px;
                 background-color: #fff;
             }
-            .main-nav{
+
+            .main-nav {
                 position: absolute;
-                background-color: #7af;
+                background-color: rgb(173, 203, 255);
                 width: 70%;
                 height: calc(100vh - 40px);
                 top: 100%;
@@ -65,79 +105,174 @@
                 opacity: 0;
                 transition: 1s;
             }
+
             /* 用~號可以選他後面的所有 但是 + 只能選到跟在後面的 如果在中間多加一個就會壞掉 */
-            #menu-control:checked ~ .main-header .main-nav{
+            #menu-control:checked~.main-header .main-nav {
                 left: 0;
                 opacity: 1;
-                
+
             }
-            .main-nav a{
+
+            .main-nav a {
                 display: block;
             }
-            .main-nav nav + nav{
+
+            .main-nav nav+nav {
                 border-top: 1px solid #000;
             }
-            .under-nav-one,
-            .under-nav-two
-             a + a{
+
+            .under-nav-one li+li {
                 border-top: 1px solid #000;
             }
-            .navs{
+
+            .under-nav-two li+li {
+                border-top: 1px solid #000;
+            }
+
+            .under-nav-three li+li {
+                border-top: 1px solid #000;
+            }
+
+            .under-nav-four li+li {
+                border-top: 1px solid #000;
+            }
+
+            .under-nav-five li+li {
+                border-top: 1px solid #000;
+            }
+
+            .under-nav-six li+li {
+                border-top: 1px solid #000;
+            }
+
+            .navs-one,
+            .navs-two,
+            .navs-three,
+            .navs-four,
+            .navs-five,
+            .navs-six {
+                list-style: none;
+                position: relative;
+            }
+            /* .navs {
+                list-style: none;
+                position: relative;
+            } */
+
+            .nav-a-lable {
                 display: flex;
                 justify-content: space-between;
-                list-style: none;
                 align-items: center;
             }
-            label{
+
+            label {
                 width: 65px;
             }
+
             .under-nav-one,
-            .under-nav-two{
+            .under-nav-two,
+            .under-nav-three,
+            .under-nav-four,
+            .under-nav-five,
+            .under-nav-six {
                 position: absolute;
-                background-color: #4af;
+                background-color: rgb(237, 216, 252);
                 width: 100%;
                 left: -100%;
-                transition: 1s;
+                transition: 0s;
                 /* z-index: -1; */
                 /* margin-top: 297px; */
                 /* display: none; */
             }
-            #under-list-one:checked ~ .main-nav .under-nav-one,
-            #under-list-two:checked ~ .main-nav .under-nav-two
-            {
+
+            #under-list-one:checked~.main-nav .under-nav-one,
+            #under-list-two:checked~.main-nav .under-nav-two,
+            #under-list-three:checked~.main-nav .under-nav-three,
+            #under-list-four:checked~.main-nav .under-nav-four,
+            #under-list-five:checked~.main-nav .under-nav-five,
+            #under-list-six:checked~.main-nav .under-nav-six {
                 left: 0;
                 opacity: 1;
                 position: relative;
                 transition: 1s;
                 /* z-index: 1; */
             }
-            /* ,{
-                left: 0;
-                opacity: 1;
-                position: relative;
-                transition: 1s;
-            } */
+
         }
-        @media screen and (width >= 1200px) {
-            .HB{
+
+        @media screen and (width >=1200px) {
+            .HB {
                 display: none;
             }
-            .main-nav{
+
+            .main-nav {
                 display: flex;
             }
-            .main-nav a{
+
+            .main-nav a {
                 color: #333;
             }
-            .main-nav a:hover{
+
+            .main-nav .nav-a-lable:hover {
                 background-color: #faf;
             }
-            .navs > label{
+
+            .nav-a-lable>label {
                 display: none;
+            }
+
+            .under-nav-one,
+            .under-nav-two,
+            .under-nav-three,
+            .under-nav-four,
+            .under-nav-five,
+            .under-nav-six {
+                display: none;
+            }
+            .navs-one:hover>ul{
+                display: block;
+            }
+            .navs-two:hover>ul{
+                display: block;
+            }
+            .navs-three:hover>ul{
+                display: block;
+            }
+            .navs-four:hover>ul{
+                display: block;
+            }
+            .navs-five:hover>ul{
+                display: block;
+            }
+            .navs-six:hover>ul{
+                display: block;
+            }
+            .navs-one,
+            .navs-two,
+            .navs-three,
+            .navs-four,
+            .navs-five,
+            .navs-six{
+                position: relative;
+            }
+            .nav-a-lable{
+                padding: 5px;
+                font-size: 20px;
+            }
+            .under-nav-one,
+            .under-nav-two,
+            .under-nav-three,
+            .under-nav-four,
+            .under-nav-five,
+            .under-nav-six{
+                position: absolute;
+                background-color: rgb(233, 200, 255);
             }
         }
     </style>
     <script src="https://kit.fontawesome.com/a52a6bb6e0.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- input放在最外層裡面的物件都可以選到 -->
     <input type="checkbox" name="" id="menu-control">
@@ -146,123 +281,138 @@
         <!-- -------------------- -->
         <div class="logo">
             <h1>
-                <a href="#"><img src="https://fakeimg.pl/80x40/200"></a>
+                <a href="#"><img src="https://fakeimg.pl/60x30/200"></a>
             </h1>
         </div>
         <!-- -------------------- -->
         <label for="menu-control" class="HB">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
         </label>
         <!-- -------------------- -->
         <input type="checkbox" name="" id="under-list-one">
         <input type="checkbox" name="" id="under-list-two">
+        <input type="checkbox" name="" id="under-list-three">
+        <input type="checkbox" name="" id="under-list-four">
+        <input type="checkbox" name="" id="under-list-five">
+        <input type="checkbox" name="" id="under-list-six">
         <nav class="main-nav">
             <!-- -------------------- -->
-            
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list-one" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
+
+            <nav class="navs-one">
+                <div class="nav-a-lable">
+                    <a href="">link</a>
+                    <label for="under-list-one" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-one">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
-            <nav class="under-nav-one">
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-            </nav>
+
             <!-- -------------------- -->
-        
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list-two" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
+
+            <nav class="navs-two">
+                <div class="nav-a-lable">
+                    <a href="">link</a>
+                    <label for="under-list-two" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-two">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
-            <nav class="under-nav-two">
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-                <a href="">link</a>
-            </nav>
+
             <!-- -------------------- -->
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
-                <!-- <nav class="under-nav">
+            <nav class="navs-three">
+                <div class="nav-a-lable">
                     <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                </nav> -->
+                    <label for="under-list-three" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-three">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
+
             <!-- -------------------- -->
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
-                <!-- <nav class="under-nav">
+            <nav class="navs-four">
+                <div class="nav-a-lable">
                     <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                </nav> -->
+                    <label for="under-list-four" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-four">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
+
             <!-- -------------------- -->
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
-                <!-- <nav class="under-nav">
+            <nav class="navs-five">
+                <div class="nav-a-lable">
                     <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                </nav> -->
+                    <label for="under-list-five" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-five">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
+
             <!-- -------------------- -->
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="under-list" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
-                <!-- <nav class="under-nav">
+            <nav class="navs-six">
+                <div class="nav-a-lable">
                     <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                </nav> -->
+                    <label for="under-list-six" class="list-control">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                </div>
+                <ul class="under-nav-six">
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
             </nav>
+
         </nav>
-        <!-- -------------------- -->
-        <!-- <nav class="under-nav">
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-        </nav> -->
+        
     </header>
 
 
 </body>
+
 </html>
