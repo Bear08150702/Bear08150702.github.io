@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num-input">
+    <br>
+    <button class="guess-btn">猜!</button>
+    <p>0 ~ 100</p>
+
+    <script>
+
+        let answer = getAnswerNumber();
+        const inputDom = document.getElementById('num-input');
+        const btn = document.querySelector('.guess-btn');
+        const p = document.querySelector('p');
+        let inputValue;
+        let min = 1;
+        let max = 100;
+
+        console.log(answer);
+
+        btn.addEventListener('click',function(){
+            //取得輸入的值
+            inputValue = inputDom.value;
+            guessNumber = parseInt(inputValue, 10);
+            
+            if(isNaN(guessNumber)){
+                alert('欠罵!重猜!!!')
+                inputDom.value = '';
+            }
+            //判斷是否為答案
+            if(guessNumber === answer){
+                alert('過關')
+                inputDom.value = ''
+                answer = getAnswerNumber();
+            }
+            //判斷超過範圍
+            else{
+                if(getAnswerNumber < min || getAnswerNumber > max){
+                    alert('欠罵!重猜!!!')
+                    inputDom.value = '';
+                }
+                else{
+                    //看要不要替換最小值
+                    if(guessNumber < answer){
+                        min = guessNumber;
+                    }
+                    else if(guessNumber > answer){
+                        max = guessNumber;
+                    }
+                    //TODO 顯示範圍
+                    p.innerText = ` ${min} ~ ${max} `
+                }
+            }
+        })
+
+        //產生1-100的隨機數字
+        function getAnswerNumber(){
+            return Math.floor(Math.random() * 100 + 1);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            line-height: 1;
+        }
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #9af;
+            position: relative;
+        }
+        .logo img{
+            /* 處理圖片下面的空白處 */
+            vertical-align: middle;
+        }
+        .main-nav a{
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        #menu-control{
+            display: none;
+        }
+        /* 打勾盒子隱藏 */
+        #under-list-one{
+            display: none;
+        }
+        @media screen and (width < 1200px) {
+            .HB{
+                width: 40px;
+                height: 40px;
+                background-color: #000;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .HB span{
+                width: 80%;
+                height: 2px;
+                background-color: #fff;
+            }
+            .main-nav{
+                position: absolute;
+                background-color: #7af;
+                width: 70%;
+                height: calc(100vh - 40px);
+                top: 100%;
+                left: -100%;
+                /* 不透明度 */
+                opacity: 0;
+                transition: 1s;
+            }
+            /* 用~號可以選他後面的所有 但是 + 只能選到跟在後面的 如果在中間多加一個就會壞掉 */
+            #menu-control:checked ~ .main-header .main-nav{
+                left: 0;
+                opacity: 1;
+            }
+            .main-nav a{
+                display: block;
+            }
+            .main-nav nav + nav{
+                border-top: 1px solid #000;
+            }
+            .under-nav a + a{
+                border-top: 1px solid #000;
+            }
+            .navs{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                align-items: center;
+            }
+            label{
+                width: 65px;
+            }
+            .under-nav{
+                position: absolute;
+                background-color: #4af;
+                width: 100%;
+                left: -100%;
+                transition: 1s;
+                /* z-index: -1; */
+                /* margin-top: 297px; */
+                /* display: none; */
+            }
+            #under-list-one:checked ~ .main-nav .under-nav{
+                left: 0;
+                opacity: 1;
+                position: relative;
+                transition: 1s;
+                /* z-index: 1; */
+            }
+        }
+        @media screen and (width >= 1200px) {
+            .HB{
+                display: none;
+            }
+            .main-nav{
+                display: flex;
+            }
+            .main-nav a{
+                color: #333;
+            }
+            .main-nav a:hover{
+                background-color: #faf;
+            }
+            .navs > label{
+                display: none;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a52a6bb6e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- input放在最外層裡面的物件都可以選到 -->
+    <input type="checkbox" name="" id="menu-control">
+    <!-- <input type="checkbox" name="" id="under-list"> -->
+    <header class="main-header">
+        <!-- -------------------- -->
+        <div class="logo">
+            <h1>
+                <a href="#"><img src="https://fakeimg.pl/80x40/200"></a>
+            </h1>
+        </div>
+        <!-- -------------------- -->
+        <label for="menu-control" class="HB">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- -------------------- -->
+        <input type="checkbox" name="" id="under-list-one">
+        <nav class="main-nav">
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="under-list-one" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+            </nav>
+            <nav class="under-nav">
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+            </nav>
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="nuder-list" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <!-- <nav class="under-nav">
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                </nav> -->
+            </nav>
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="nuder-list" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <!-- <nav class="under-nav">
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                </nav> -->
+            </nav>
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="nuder-list" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <!-- <nav class="under-nav">
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                </nav> -->
+            </nav>
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="nuder-list" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <!-- <nav class="under-nav">
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                </nav> -->
+            </nav>
+            <!-- -------------------- -->
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="nuder-list" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <!-- <nav class="under-nav">
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                    <a href="">link</a>
+                </nav> -->
+            </nav>
+        </nav>
+        <!-- -------------------- -->
+        <!-- <nav class="under-nav">
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav> -->
+    </header>
+
+
+</body>
+</html>

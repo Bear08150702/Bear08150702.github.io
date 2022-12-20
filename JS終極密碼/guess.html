@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-family: 'papyrus';
+        }
+        .box{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./01.jpg);
+            background-size: cover;
+            border-radius: 30px;
+        }
+        .tittle{
+            font-size: 60px;
+            color: rgb(46, 130, 255);
+            margin: 20px;
+        }
+        .guess{
+            width: 300px;
+            display: flex;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .guess > p{
+            margin-left: 20px;
+            margin-right: 20px;
+            color: rgb(106, 169, 250);
+        }
+        .number{
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .buttonnumber{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(254, 205, 248);
+            margin: 10px;
+            border-radius: 40px;
+            font-size: 50px;
+            color: rgb(106, 169, 250);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+        .buttonnumber:last-child{
+            margin-left: 110px;
+        }
+        .under{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .reset,
+        .inputguess{
+            width: 120px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgb(250, 187, 187);
+            font-size: 20px;
+            color: rgb(255, 29, 199);
+        }
+        /* .inputguess{
+            width: 120px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgb(250, 187, 187);
+            font-size: 20px;
+            color: rgb(255, 29, 199);
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h1 class="tittle">ultimate password</h1>
+        <div class="guess">
+            <!-- <label class="allnumber"></label> -->
+            <p>1-100</p>
+            <input type="text" placeholder="" id="innumber">
+
+            <div class="guessnumber"></div>
+        </div>
+        <div class="number">
+            <button class="buttonnumber">1</button>
+            <button class="buttonnumber">2</button>
+            <button class="buttonnumber">3</button>
+            <button class="buttonnumber">4</button>
+            <button class="buttonnumber">5</button>
+            <button class="buttonnumber">6</button>
+            <button class="buttonnumber">7</button>
+            <button class="buttonnumber">8</button>
+            <button class="buttonnumber">9</button>
+            <button class="buttonnumber">0</button>
+        </div>
+        <div class="under">
+            <button class="reset">重製</button>
+            <button class="inputguess">猜</button>
+        </div>
+    </div>
+
+    <script>
+        //產生亂數(本輪答案)
+        let answer = getAnswerNumber();
+        let inputDOM = document.getElementById('innumber');
+        const btn = document.querySelector('.inputguess');
+        let p = document.querySelector('p');
+        const reset = document.querySelector('.reset');
+        let min = 1;
+        let max = 100;
+
+        //數字鍵顯示在input裡
+        const numberbuttons = document.querySelectorAll('.buttonnumber')
+        numberbuttons.forEach(x => {
+            x.addEventListener('click',function(){
+                console.log(x.innerText);
+                inputDOM.value += x.innerText;
+            })
+        })
+        //防止US輸入非數字或是超過範圍的數字
+        //將US輸入的字串轉換成數字 在按下button .inputguess時
+        btn.addEventListener('click',function(){
+            //把字串轉成10進位數字
+            let news = parseInt(inputDOM.value, 10)
+
+            if(isNaN(news)){
+                //跳出上方提示箱
+                alert('你傻嗎');
+            }
+            else if( news > max || news < min){
+                alert('有眼嗎');
+            }
+            //對比數字大小 如果小於答案 更改min 如果大於答案 更改max 
+            else if( news > answer && news < max){
+                max = news;
+                p.innerText = ` ${min}-${max} `
+            }
+            else if( news < answer && news > min){
+                min = news;
+                p.innerText = ` ${min}-${max} `
+            }
+            //等於答案時 跳出猜中 並重置遊戲
+            else if(news === answer){
+                alert('好棒棒')
+                answerreset();
+            }
+            inputDOM.value = '';
+        })
+
+        reset.addEventListener('click',function(){
+                answerreset();
+        })
+        
+        //產生1-100的隨機數字
+        function getAnswerNumber(){
+            return Math.floor(Math.random() * 100 + 1);
+        }
+        function answerreset(){
+            inputDOM.value = '';
+            min = 1;
+            max = 100;
+            p.innerText = ` ${min}-${max} `
+            answer = getAnswerNumber()
+        }
+    </script>
+
+
+</body>
+</html>
+
+<!-- 封裝:隱藏細節,提取重點(語意)
+
+
+遊戲邏輯
+1.產生1-100的隨機數字 可以用 Math.Random 但他只能產生0-1之間的數字 所以*100+1 就可 以產 生1-100的數字
+2.產生數字
+3.數字顯示
+4.判斷使用者輸入的數字是否符合答案
+    按下按鈕後 取得輸入的值 把字串轉換成數字
+    符合:遊戲結束
+
+    不符合:
+        超過範圍,跳提示罵他!
+        輸入的是數字:
+        替換(輸入區間)
+            min max
+            輸入的數字小於答案:替換min
+            輸入的數字大於答案:替換max -->
