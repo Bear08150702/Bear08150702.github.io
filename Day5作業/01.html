@@ -35,6 +35,9 @@
         #under-list-one{
             display: none;
         }
+        #under-list-two{
+            display: none;
+        }
         @media screen and (width < 1200px) {
             .HB{
                 width: 40px;
@@ -45,6 +48,7 @@
                 justify-content: space-evenly;
                 align-items: center;
             }
+            
             .HB span{
                 width: 80%;
                 height: 2px;
@@ -65,6 +69,7 @@
             #menu-control:checked ~ .main-header .main-nav{
                 left: 0;
                 opacity: 1;
+                
             }
             .main-nav a{
                 display: block;
@@ -72,7 +77,9 @@
             .main-nav nav + nav{
                 border-top: 1px solid #000;
             }
-            .under-nav a + a{
+            .under-nav-one,
+            .under-nav-two
+             a + a{
                 border-top: 1px solid #000;
             }
             .navs{
@@ -84,7 +91,8 @@
             label{
                 width: 65px;
             }
-            .under-nav{
+            .under-nav-one,
+            .under-nav-two{
                 position: absolute;
                 background-color: #4af;
                 width: 100%;
@@ -94,13 +102,21 @@
                 /* margin-top: 297px; */
                 /* display: none; */
             }
-            #under-list-one:checked ~ .main-nav .under-nav{
+            #under-list-one:checked ~ .main-nav .under-nav-one,
+            #under-list-two:checked ~ .main-nav .under-nav-two
+            {
                 left: 0;
                 opacity: 1;
                 position: relative;
                 transition: 1s;
                 /* z-index: 1; */
             }
+            /* ,{
+                left: 0;
+                opacity: 1;
+                position: relative;
+                transition: 1s;
+            } */
         }
         @media screen and (width >= 1200px) {
             .HB{
@@ -141,15 +157,33 @@
         </label>
         <!-- -------------------- -->
         <input type="checkbox" name="" id="under-list-one">
+        <input type="checkbox" name="" id="under-list-two">
         <nav class="main-nav">
             <!-- -------------------- -->
+            
             <nav class="navs">
                 <a href="">link</a>
                 <label for="under-list-one" class="list-control">
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
             </nav>
-            <nav class="under-nav">
+            <nav class="under-nav-one">
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+            </nav>
+            <!-- -------------------- -->
+        
+            <nav class="navs">
+                <a href="">link</a>
+                <label for="under-list-two" class="list-control">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+            </nav>
+            <nav class="under-nav-two">
                 <a href="">link</a>
                 <a href="">link</a>
                 <a href="">link</a>
@@ -160,7 +194,7 @@
             <!-- -------------------- -->
             <nav class="navs">
                 <a href="">link</a>
-                <label for="nuder-list" class="list-control">
+                <label for="under-list" class="list-control">
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
                 <!-- <nav class="under-nav">
@@ -175,7 +209,7 @@
             <!-- -------------------- -->
             <nav class="navs">
                 <a href="">link</a>
-                <label for="nuder-list" class="list-control">
+                <label for="under-list" class="list-control">
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
                 <!-- <nav class="under-nav">
@@ -190,7 +224,7 @@
             <!-- -------------------- -->
             <nav class="navs">
                 <a href="">link</a>
-                <label for="nuder-list" class="list-control">
+                <label for="under-list" class="list-control">
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
                 <!-- <nav class="under-nav">
@@ -205,22 +239,7 @@
             <!-- -------------------- -->
             <nav class="navs">
                 <a href="">link</a>
-                <label for="nuder-list" class="list-control">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </label>
-                <!-- <nav class="under-nav">
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                    <a href="">link</a>
-                </nav> -->
-            </nav>
-            <!-- -------------------- -->
-            <nav class="navs">
-                <a href="">link</a>
-                <label for="nuder-list" class="list-control">
+                <label for="under-list" class="list-control">
                     <i class="fa-solid fa-chevron-down"></i>
                 </label>
                 <!-- <nav class="under-nav">
