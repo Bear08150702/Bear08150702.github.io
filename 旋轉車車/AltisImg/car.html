@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a52a6bb6e0.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 180, 180);
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .color {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-left,
+        .button-right{
+            border: none;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(244, 253, 255);
+        }
+        i{
+            font-size: 50px;
+        }
+        .gray {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border-radius: 50%;
+            border: none;
+            margin: 10px;
+        }
+        .red {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+            border: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Altis 360° 賞車</h1>
+    </div>
+    <div class="button">
+        <button class="button-left"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="imgs">
+            <img src="" alt="">
+        </div>
+        <button class="button-right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="color">
+        <button class="gray"></button>
+        <!-- <button class="red"></button> -->
+    </div>
+
+    <script>
+        let carArray = [];
+        let buttonright = document.querySelector('.button-right');
+        let buttonleft = document.querySelector('.button-left');
+        let imgs = document.querySelector('.imgs img');
+        let index = 0;
+
+        window.onload = function () {
+            CarGray();
+            // console.log(carArray)
+            let carpic = document.querySelector('.img');
+            imgs.src = carArray[index];
+            buttonleft.addEventListener('click', function () {
+                if (index === 59) {
+                    index = 0;
+                }
+                else {
+                    index++;
+                }
+                console.log(index)
+                imgs.src = carArray[index]
+            })
+            buttonright.addEventListener('click', function () {
+                if (index === 0) {
+                    index = 59;
+                }
+                else {
+                    index--;
+                }
+                // console.log(index)
+                imgs.src = carArray[index]
+            })
+        }
+        //左 當我按按紐的時候，要可以換到下一張圖片
+        //右 按按紐的時候，可以換到上一張
+
+        //建一個方法 放所有照片
+        function CarGray (){
+            for(i = 1; i < 61; i++){
+                let carPic =`./AltisGray/360EXT_1_18_${i}.png`;
+                carArray.push(carPic)
+            }
+        }
+        function CarRed (){
+            for(i = 1; i < 61; i++){
+                let carPic =`./AltisRed/360EXT_1_18_${i}.png`;
+                carArray.push(carPic)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
