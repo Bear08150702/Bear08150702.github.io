@@ -1,0 +1,22 @@
+[
+    {"type":"ipadair", "id": "A0001","color": "spacegray","storage": "64GB","network": "Wi-Fi","price": 19900,"description": "太空灰 Wi-Fi","picture": "ipadair-spacegray.jpg"},
+    {"type":"ipadair", "id": "A0002","color": "spacegray","storage": "64GB","network": "5G","price": 24900,"description": "太空灰 5G","picture": "ipadair-spacegray.jpg"},
+    {"type":"ipadair", "id": "A0003","color": "spacegray","storage": "256GB","network": "Wi-Fi","price": 24900,"description": "太空灰 Wi-Fi","picture": "ipadair-spacegray.jpg"},
+    {"type":"ipadair", "id": "A0004","color": "spacegray","storage": "256GB","network": "5G","price": 29900,"description": "太空灰 5G","picture": "ipadairspacegray.jpg"},
+    {"type":"ipadair", "id": "A0005","color": "pink","storage": "64GB","network": "Wi-Fi","price": 19900,"description": "粉紅色 Wi-Fi","picture": "ipadair-pink.jpg"},
+    {"type":"ipadair", "id": "A0006","color": "pink","storage": "64GB","network": "5G","price": 24900,"description": "粉紅色 5G","picture": "ipadair-pink.jpg"},
+    {"type":"ipadair", "id": "A0007","color": "pink","storage": "256GB","network": "Wi-Fi","price": 24900,"description": "粉紅色 Wi-Fi","picture": "ipadair-pink.jpg"},
+    {"type":"ipadair", "id": "A0008","color": "pink","storage": "256GB","network": "5G","price": 29900,"description": "粉紅色 5G","picture": "ipadair-pink.jpg"},
+    {"type":"ipadair", "id": "A0009","color": "starlight","storage": "64GB","network": "Wi-Fi","price": 19900,"description": "星光色 Wi-Fi","picture": "ipadair-starlight.jpg"},
+    {"type":"ipadair", "id": "A00010","color": "starlight","storage": "64GB","network": "5G","price": 24900,"description": "星光色 5G","picture": "ipadair-starlight.jpg"},
+    {"type":"ipadair", "id": "A00011","color": "starlight","storage": "256GB","network": "Wi-Fi","price": 24900,"description": "星光色 Wi-Fi","picture": "ipadair-starlight.jpg"},
+    {"type":"ipadair", "id": "A00012","color": "starlight","storage": "256GB","network": "5G","price": 29900,"description": "星光色 5G","picture": "ipadair-starlight.jpg"},
+    {"type":"ipadair", "id": "A00013","color": "blue","storage": "64GB","network": "Wi-Fi","price": 19900,"description": "藍色 Wi-Fi","picture": "ipadair-blue.jpg"},
+    {"type":"ipadair", "id": "A00014","color": "blue","storage": "64GB","network": "5G","price": 24900,"description": "藍色 5G","picture": "ipadair-blue.jpg"},
+    {"type":"ipadair", "id": "A00015","color": "blue","storage": "256GB","network": "Wi-Fi","price": 24900,"description": "藍色 Wi-Fi","picture": "ipadair-blue.jpg"},
+    {"type":"ipadair", "id": "A00016","color": "blue","storage": "256GB","network": "5G","price": 29900,"description": "藍色 5G","picture": "ipadair-blue.jpg"},
+    {"type":"ipadair", "id": "A00017","color": "purple","storage": "64GB","network": "Wi-Fi","price": 19900,"description": "紫色 Wi-Fi","picture": "ipadair-purple.jpg"},
+    {"type":"ipadair", "id": "A00018","color": "purple","storage": "64GB","network": "5G","price": 24900,"description": "紫色 5G","picture": "ipadair-purple.jpg"},
+    {"type":"ipadair", "id": "A00019","color": "purple","storage": "256GB","network": "Wi-Fi","price": 24900,"description": "紫色 Wi-Fi","picture": "ipadair-purple.jpg"},
+    {"type":"ipadair", "id": "A00020","color": "purple","storage": "256GB","network": "5G","price": 29900,"description": "紫色 5G","picture": "ipadair-purple.jpg"}
+]
