@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .choose{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .ipad-air-text,
+        .iphone-min-text,
+        .iphone-max-text{
+            background-color: aquamarine;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>iPhone</h1>
+    </div>
+    <div class="choose">
+        <button class="ipad-air-text">Ipad Air</button>
+        <button class="iphone-min-text">Iphone 14</button>
+        <button class="iphone-max-text">Iphone 14 Plus</button>
+    </div>
+
+    <div class="ipadair">
+        <div class="ipadair-pic">
+            <img src="" alt="">
+        </div>
+        <div class="ipadair-choosebutton">
+            <div class="ipadair-choosebutton-text">
+                <div class="ipadair-color">顏色</div>
+            </div>
+            <div class="ipadair-choosebutton-color">
+                <div class="ipadair-button-spacegray"></div>
+                <div class="ipadair-button-pink"></div>
+                <div class="ipadair-button-starlight"></div>
+                <div class="ipadair-button-blue"></div>
+                <div class="ipadair-button-purple"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="iphone-min">
+        <div class="iphone-min-pic">
+            <img src="" alt="">
+        </div>
+        <div class="iphone-min-choosebutton">
+            <div class="iphone-min-choosebutton-text">
+                <div class="iphone-min-color">顏色</div>
+            </div>
+            <div class="iphone-min-choosebutton-color">
+                <div class="iphone-min-button-blue"></div>
+                <div class="iphone-min-button-purple"></div>
+                <div class="iphone-min-button-midnight"></div>
+                <div class="iphone-min-button-starlight"></div>
+                <div class="iphone-min-button-red"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="iphone-max">
+        <div class="iphone-max-pic">
+            <img src="" alt="">
+        </div>
+        <div class="iphone-max-choosebutton">
+            <div class="iphone-max-choosebutton-text">
+                <div class="iphone-max-color">顏色</div>
+            </div>
+            <div class="iphone-max-choosebutton-color">
+                <div class="iphone-min-button-blue"></div>
+                <div class="iphone-min-button-purple"></div>
+                <div class="iphone-min-button-midnight"></div>
+                <div class="iphone-min-button-starlight"></div>
+                <div class="iphone-max-button-red"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let ipadairArray = [
+            { id: "A0001", color: "spacegray", storage: "64GB", network: "Wi-Fi", price: 19900, description: "太空灰 Wi-Fi", picture: "ipadair-spacegray.jpg" },
+            { id: "A0002", color: "spacegray", storage: "64GB", network: "5G", price: 24900, description: "太空灰 5G", picture: "ipadair-spacegray.jpg" },
+            { id: "A0003", color: "spacegray", storage: "256GB", network: "Wi-Fi", price: 24900, description: "太空灰 Wi-Fi", picture: "ipadair-spacegray.jpg" },
+            { id: "A0004", color: "spacegray", storage: "256GB", network: "5G", price: 29900, description: "太空灰 5G", picture: "ipadairspacegray.jpg" },
+            { id: "A0005", color: "pink", storage: "64GB", network: "Wi-Fi", price: 19900, description: "粉紅色 Wi-Fi", picture: "ipadair-pink.jpg" },
+            { id: "A0006", color: "pink", storage: "64GB", network: "5G", price: 24900, description: "粉紅色 5G", picture: "ipadair-pink.jpg" },
+            { id: "A0007", color: "pink", storage: "256GB", network: "Wi-Fi", price: 24900, description: "粉紅色 Wi-Fi", picture: "ipadair-pink.jpg" },
+            { id: "A0008", color: "pink", storage: "256GB", network: "5G", price: 29900, description: "粉紅色 5G", picture: "ipadair-pink.jpg" },
+            { id: "A0009", color: "starlight", storage: "64GB", network: "Wi-Fi", price: 19900, description: "星光色 Wi-Fi", picture: "ipadair-starlight.jpg" },
+            { id: "A00010", color: "starlight", storage: "64GB", network: "5G", price: 24900, description: "星光色 5G", picture: "ipadair-starlight.jpg" },
+            { id: "A00011", color: "starlight", storage: "256GB", network: "Wi-Fi", price: 24900, description: "星光色 Wi-Fi", picture: "ipadair-starlight.jpg" },
+            { id: "A00012", color: "starlight", storage: "256GB", network: "5G", price: 29900, description: "星光色 5G", picture: "ipadair-starlight.jpg" },
+            { id: "A00013", color: "blue", storage: "64GB", network: "Wi-Fi", price: 19900, description: "藍色 Wi-Fi", picture: "ipadair-blue.jpg" },
+            { id: "A00014", color: "blue", storage: "64GB", network: "5G", price: 24900, description: "藍色 5G", picture: "ipadair-blue.jpg" },
+            { id: "A00015", color: "blue", storage: "256GB", network: "Wi-Fi", price: 24900, description: "藍色 Wi-Fi", picture: "ipadair-blue.jpg" },
+            { id: "A00016", color: "blue", storage: "256GB", network: "5G", price: 29900, description: "藍色 5G", picture: "ipadair-blue.jpg" },
+            { id: "A00017", color: "purple", storage: "64GB", network: "Wi-Fi", price: 19900, description: "紫色 Wi-Fi", picture: "ipadair-purple.jpg" },
+            { id: "A00018", color: "purple", storage: "64GB", network: "5G", price: 24900, description: "紫色 5G", picture: "ipadair-purple.jpg" },
+            { id: "A00019", color: "purple", storage: "256GB", network: "Wi-Fi", price: 24900, description: "紫色 Wi-Fi", picture: "ipadair-purple.jpg" },
+            { id: "A00020", color: "purple", storage: "256GB", network: "5G", price: 29900, description: "紫色 5G", picture: "ipadair-purple.jpg" },
+        ];
+
+        let iphoneArray = [
+            { id: "A0001", model: "iphone 14", color: "blue", storage: "128GB", price: 27900, description: " 藍色 128GB", picture: "iphone-blue.jpg" },
+            { id: "A0002", model: "iphone 14", color: "blue", storage: "256GB", price: 31400, description: " 藍色 256GB", picture: "iphone-blue.jpg" },
+            { id: "A0003", model: "iphone 14", color: "blue", storage: "512GB", price: 38400, description: " 藍色 512GB", picture: "iphone-blue.jpg" },
+            { id: "A0004", model: "iphone 14", color: "purple", storage: "128GB", price: 27900, description: " 紫色 128GB", picture: "iphone-purple.jpg" },
+            { id: "A0005", model: "iphone 14", color: "purple", storage: "256GB", price: 31400, description: " 紫色 256GB", picture: "iphone-purple.jpg" },
+            { id: "A0006", model: "iphone 14", color: "purple", storage: "512GB", price: 38400, description: " 紫色 512GB", picture: "iphone-purple.jpg" },
+            { id: "A0007", model: "iphone 14", color: "midnight", storage: "128GB", price: 27900, description: " 午夜色 128GB", picture: "iphone-midnight.jpg" },
+            { id: "A0008", model: "iphone 14", color: "midnight", storage: "256GB", price: 31400, description: " 午夜色 256GB", picture: "iphone-midnight.jpg" },
+            { id: "A0009", model: "iphone 14", color: "midnight", storage: "512GB", price: 38400, description: " 午夜色 512GB", picture: "iphone-midnight.jpg" },
+            { id: "A00010", model: "iphone 14", color: "starlight", storage: "128GB", price: 27900, description: " 星光色 128GB", picture: "iphone-starlight.jpg" },
+            { id: "A00011", model: "iphone 14", color: "starlight", storage: "256GB", price: 31400, description: " 星光色 256GB", picture: "iphone-starlight.jpg" },
+            { id: "A00012", model: "iphone 14", color: "starlight", storage: "512GB", price: 38400, description: " 星光色 512GB", picture: "iphone-starlight.jpg" },
+            { id: "A00013", model: "iphone 14", color: "red", storage: "128GB", price: 27900, description: " 紅色 128GB", picture: "iphone-red.jpg" },
+            { id: "A00014", model: "iphone 14", color: "red", storage: "256GB", price: 31400, description: " 紅色 256GB", picture: "iphone-red.jpg" },
+            { id: "A00015", model: "iphone 14", color: "red", storage: "512GB", price: 38400, description: " 紅色 512GB", picture: "iphone-red.jpg" },
+        ];
+
+        let iphonePlusArray = [
+            { id: "A0001", model: "iphone 14 Plus", color: "blue", storage: "128GB", price: 31900, description: " 藍色 128GB", picture: "iphone-blue.jpg" },
+            { id: "A0002", model: "iphone 14 Plus", color: "blue", storage: "256GB", price: 35400, description: " 藍色 256GB", picture: "iphone-blue.jpg" },
+            { id: "A0003", model: "iphone 14 Plus", color: "blue", storage: "512GB", price: 42400, description: " 藍色 512GB", picture: "iphone-blue.jpg" },
+            { id: "A0004", model: "iphone 14 Plus", color: "purple", storage: "128GB", price: 31900, description: " 紫色 128GB", picture: "iphone-purple.jpg" },
+            { id: "A0005", model: "iphone 14 Plus", color: "purple", storage: "256GB", price: 35400, description: " 紫色 256GB", picture: "iphone-purple.jpg" },
+            { id: "A0006", model: "iphone 14 Plus", color: "purple", storage: "512GB", price: 42400, description: " 紫色 512GB", picture: "iphone-purple.jpg" },
+            { id: "A0007", model: "iphone 14 Plus", color: "midnight", storage: "128GB", price: 31900, description: " 午夜色 128GB", picture: "iphone-midnight.jpg" },
+            { id: "A0008", model: "iphone 14 Plus", color: "midnight", storage: "256GB", price: 35400, description: " 午夜色 256GB", picture: "iphone-midnight.jpg" },
+            { id: "A0009", model: "iphone 14 Plus", color: "midnight", storage: "512GB", price: 42400, description: " 午夜色 512GB", picture: "iphone-midnight.jpg" },
+            { id: "A00010", model: "iphone 14 Plus", color: "starlight", storage: "128GB", price: 31900, description: " 星光色 128GB", picture: "iphone-starlight.jpg" },
+            { id: "A00011", model: "iphone 14 Plus", color: "starlight", storage: "256GB", price: 35400, description: " 星光色 256GB", picture: "iphone-starlight.jpg" },
+            { id: "A00012", model: "iphone 14 Plus", color: "starlight", storage: "512GB", price: 42400, description: " 星光色 512GB", picture: "iphone-starlight.jpg" },
+            { id: "A00013", model: "iphone 14 Plus", color: "red", storage: "128GB", price: 31900, description: " 紅色 128GB", picture: "iphone-red.jpg" },
+            { id: "A00014", model: "iphone 14 Plus", color: "red", storage: "256GB", price: 35400, description: " 紅色 256GB", picture: "iphone-red.jpg" },
+            { id: "A00015", model: "iphone 14 Plus", color: "red", storage: "512GB", price: 42400, description: " 紅色 512GB", picture: "iphone-red.jpg" },
+        ];
+
+
+        // let ipad = ipadairArray.filter(x => x.color == "spacegray" && x.storage == "64GB" && x.network == "Wi-Fi")[0];
+
+        document.write(JSON.stringify(ipad));
+
+    </script>
+</body>
+
+</html>

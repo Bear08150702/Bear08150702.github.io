@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-family: 'papyrus';
+        }
+
+        .number-game {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./01.jpg);
+            background-size: cover;
+            border-radius: 30px;
+        }
+
+        .title {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .title h1 {
+            font-size: 35px;
+            color: rgb(128, 128, 255);
+            display: flex;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .title p {
+            color: rgb(255, 139, 158);
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        .start {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            margin-right: 30px;
+        }
+
+        .start button {
+            padding: 5px;
+            color: rgb(185, 120, 201);
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-size: 15px;
+        }
+
+        ul {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid gray;
+            margin-bottom: 5px;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-around; */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+
+        .buttons input {
+            width: 40%;
+        }
+
+        .buttons button {
+            border-color: rgb(212, 167, 255);
+            border-radius: 5px;
+            color: rgb(255, 138, 255);
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="number-game">
+        <div class="title">
+            <h1>猜數字!</h1>
+            <p>說明:<br>當謎底為8123，而猜謎者猜1052時，出題者必須提示0A2B。<br>當謎底為5637，而猜謎者猜4931時，出題者必須提示1A0B。</p>
+        </div>
+        <div class="start">
+            <button class="start-button">看懂了!開始吧!</button>
+        </div>
+        <ul class="container">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="buttons">
+            <input class="box" type="text">
+            <button class="confirm">下好離手!</button>
+            <button class="again">從新來過!</button>
+            <button class="give-up">放棄人森,看答案</button>
+        </div>
+    </div>
+
+    <script>
+        let ButtonStar, Confirm, giveup, Again, Box, userinput, usArray, A, B, numbergame, Container, ul, li, lis;
+        let onetoten = [];
+
+        ButtonStar = document.querySelector('.start-button');
+
+        ButtonStar.addEventListener('click', function () {
+            randomnumbers();
+            ButtonStar.disabled = true;
+        });
+
+        function randomnumbers() {
+            // return Math.floor(Math.random() * 1000 + 1);
+            onetoten = [];
+            for (i = 0; i < 10; i++) {
+                onetoten.push(i);
+            }
+            const onetotenArray = (arr) => arr.sort(() => 0.5 - Math.random());
+            // console.log(onetotenArray)
+            onetoten = onetotenArray(onetoten).slice(0, 4);
+            console.log(onetoten);
+        }
+
+        Confirm = document.querySelector('.confirm');
+        Box = document.querySelector('.box');
+
+        Confirm.addEventListener('click', function () {
+            // Confirm.disabled = true;
+            checkusAns();
+            usArray = Array.from(userinput);
+            let onetotenArray = onetoten.map(x => x.toString());
+            A = 0;
+            B = 0;
+
+            for (let x = 0; x <= 3; x++) {
+                if (usArray[x] == onetotenArray[x]) {
+                    A++;
+                }
+                else if (usArray.includes(onetotenArray[x])) {
+                    B++;
+                }
+                // console.log(onetotenArray)
+                // console.log(usArray)
+            }
+            AddliList();
+            if (A == 4) {
+                alert('好棒棒')
+                ButtonStar.disabled = false;
+                li.innerText = ` 還想繼續請按開始 不想繼續案叉叉`;
+            }
+
+            console.log(A)
+            console.log(B)
+        });
+
+        function checkusAns() {
+            userinput = Box.value;
+            if (isNaN(userinput)) {
+                alert('輸入數字!!!!!');
+                // Box.value = '';
+            }
+            else if (userinput.length != 4) {
+                alert('請乖乖輸入好4個不重複的數字');
+            }
+            Box.value = '';
+        }
+
+        Again = document.querySelector('.again');
+
+        Again.addEventListener('click', function () {
+            randomnumbers();
+            ButtonStar.disabled = false;
+            Box.value = '';
+        })
+
+        giveup = document.querySelector('.give-up');
+
+        giveup.addEventListener('click', function () {
+            // giveup.disabled = true;
+            let Ans = onetoten.join('');
+            alert(`答案是 ${Ans},遊戲結束`);
+            ButtonStar.disabled = false;
+            Box.value = '';
+            lis = document.querySelectorAll('li');
+            for(let a = 0; a < 10; a++){
+                lis[a].innerText = ` `;
+            }
+            
+        })
+
+        // li = document.querySelector('li');
+
+        function AddliList() {
+            ul = document.querySelector('ul');
+            li = document.createElement('li');
+            ul.appendChild(li);
+            if (ul.childElementCount > 10) {
+                ul.firstElementChild.remove()
+            }
+            console.log(ul.childElementCount)
+            li.innerHTML = `${A}A${B}B`;
+            // for(let i = 0; i <= 9; i++){
+            //     li = document.createElement('li');
+            //     ul.appendChild(li);
+            // }
+        }
+
+    </script>
+
+</body>
+
+</html>
