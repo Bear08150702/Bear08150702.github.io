@@ -247,7 +247,12 @@
             li.innerHTML = `${A}A${B}B ${userinput}`;
         }
 
-        
+        function TrueorFalse(bool) {
+            ButtonStar.disabled = !bool;
+            Confirm.disabled = bool;
+            Again.disabled = bool;
+            giveup.disabled = bool;
+        }
 
     </script>
 
