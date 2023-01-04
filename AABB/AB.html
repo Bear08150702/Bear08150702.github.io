@@ -148,18 +148,6 @@
             TrueorFalse(false);
         });
 
-        function randomnumbers() {
-            // return Math.floor(Math.random() * 1000 + 1);
-            onetoten = [];
-            for (i = 0; i < 10; i++) {
-                onetoten.push(i);
-            }
-            const onetotenArray = (arr) => arr.sort(() => 0.5 - Math.random());
-            // console.log(onetotenArray)
-            onetoten = onetotenArray(onetoten).slice(0, 4);
-            // console.log(onetoten);
-        }
-
         Confirm.addEventListener('click', function () {
             // TrueorFalse(true);
             checkusAns();
@@ -196,18 +184,6 @@
             // console.log(B)
         });
 
-        function checkusAns() {
-            userinput = Box.value;
-            if (isNaN(userinput)) {
-                alert('輸入數字!!!!!');
-                // Box.value = '';
-            }
-            else if (userinput.length != 4) {
-                alert('請乖乖輸入好4個不重複的數字');
-            }
-            Box.value = '';
-        }
-
         Again.addEventListener('click', function () {
             TrueorFalse(true);
             randomnumbers();
@@ -218,7 +194,7 @@
                 lis[a].innerText = ` `;
             }
         })
-
+        
         giveup.addEventListener('click', function () {
             TrueorFalse(true);
             // giveup.disabled = true;
@@ -232,6 +208,33 @@
             }
 
         })
+        
+        
+        // function 部分
+        
+        function checkusAns() {
+            userinput = Box.value;
+            if (isNaN(userinput)) {
+                alert('輸入數字!!!!!');
+                // Box.value = '';
+            }
+            else if (userinput.length != 4) {
+                alert('請乖乖輸入好4個不重複的數字');
+            }
+            Box.value = '';
+        }
+
+        function randomnumbers() {
+            // return Math.floor(Math.random() * 1000 + 1);
+            onetoten = [];
+            for (i = 0; i < 10; i++) {
+                onetoten.push(i);
+            }
+            const onetotenArray = (arr) => arr.sort(() => 0.5 - Math.random());
+            // console.log(onetotenArray)
+            onetoten = onetotenArray(onetoten).slice(0, 4);
+            // console.log(onetoten);
+        }
 
         function AddliList() {
             ul = document.querySelector('ul');
@@ -242,10 +245,6 @@
             }
             console.log(ul.childElementCount)
             li.innerHTML = `${A}A${B}B ${userinput}`;
-            // for(let i = 0; i <= 9; i++){
-            //     li = document.createElement('li');
-            //     ul.appendChild(li);
-            // }
         }
 
         function TrueorFalse(bool) {

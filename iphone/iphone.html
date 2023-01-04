@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
     <style>
         .title{
             width: 100%;
             display: flex;
             justify-content: center;
+            margin-top: 20px;
+        }
+        h1{
+            font-size: 50px;
+            color: rgb(58, 140, 255);
         }
         .choose{
             width: 100%;
@@ -20,11 +26,308 @@
         .ipad-air-text,
         .iphone-min-text,
         .iphone-max-text{
+            width: 150px;
             background-color: aquamarine;
             border: 1px solid gray;
             border-radius: 5px;
-            margin: 10px;
-            padding: 5px;
+            margin: 15px;
+            padding: 10px;
+        }
+        .ipadair{
+            width: calc(100% - 40px);
+            /* display: flex; */
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .ipadair-pic{
+            width: calc(50% - 15px);
+        }
+        .ipadair-pic img{
+            width: 100%;
+        }
+        .ipadair-choosebutton{
+            width: calc(50% - 15px);
+        }
+        .ipadair-choosebutton-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* margin-bottom: 20px; */
+        }
+        .ipadair-choosebutton-text p{
+            font-size: 30px;
+            color: rgb(90, 90, 90);
+        } 
+        .ipadair-choosebutton-color{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .ipadair-choosebutton-pic{
+            display: none;
+        }
+        .ipadair-button-spacegray{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(201, 201, 201);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .ipadair-button-pink{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(255, 205, 214);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .ipadair-button-starlight{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(253, 255, 205);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .ipadair-button-blue{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(119, 117, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .ipadair-button-purple{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(215, 147, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .ipadair-choosebutton-storage{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ipadair-choosebutton-storage-sixfour,
+        .ipadair-choosebutton-storage-twofivesix{
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(212, 251, 255);
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .ipadair-choosebutton-network{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ipadair-choosebutton-network-wifi,
+        .ipadair-choosebutton-network-mobile{
+            width: 100px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(212, 251, 255);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+
+        .iphone-min{
+            width: calc(100% - 40px);
+            /* display: flex; */
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .iphone-min-pic{
+            width: calc(50% - 15px);
+        }
+        .iphone-min-pic img{
+            width: 100%;
+        }
+        .iphone-min-choosebutton{
+            width: calc(50% - 15px);
+        }
+        .iphone-min-choosebutton-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .iphone-min-choosebutton-text p{
+            font-size: 30px;
+            color: rgb(90, 90, 90);
+        }
+        .iphone-min-choosebutton-color{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .iphone-min-choosebutton-pic{
+            display: none;
+        }
+        .iphone-min-button-blue{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(119, 117, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-min-button-purple{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(215, 147, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-min-button-midnight{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(18, 18, 18);
+            border-radius: 50%;
+            margin: 5px;
+            color: white;
+        }
+        .iphone-min-button-starlight{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(253, 255, 205);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-min-button-red{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(255, 0, 47);
+            border-radius: 50%;
+            margin: 5px;
+            color: white;
+        }
+        .iphone-min-choosebutton-storage{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .iphone-min-choosebutton-storage-onetwoeight,
+        .iphone-min-choosebutton-storage-twofivesix,
+        .iphone-min-choosebutton-storage-fiveonetwo{
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(212, 251, 255);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .iphone-max{
+            width: calc(100% - 40px);
+            /* display: flex; */
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .iphone-max-pic{
+            width: calc(50% - 15px);
+        }
+        .iphone-max-pic img{
+            width: 100%;
+        }
+        .iphone-max-choosebutton{
+            width: calc(50% - 15px);
+        }
+        .iphone-max-choosebutton-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .iphone-max-choosebutton-text p{
+            font-size: 30px;
+            color: rgb(90, 90, 90);
+        }
+        .iphone-max-choosebutton-color{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .iphone-max-choosebutton-pic{
+            display: none;
+        }
+        .iphone-max-button-blue{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(119, 117, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-max-button-purple{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(215, 147, 255);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-max-button-midnight{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(18, 18, 18);
+            border-radius: 50%;
+            margin: 5px;
+            color: white;
+        }
+        .iphone-max-button-starlight{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(253, 255, 205);
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .iphone-max-button-red{
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(255, 0, 47);
+            border-radius: 50%;
+            margin: 5px;
+            color: white;
+        }
+        .iphone-max-choosebutton-storage{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .iphone-max-choosebutton-storage-onetwoeight,
+        .iphone-max-choosebutton-storage-twofivesix,
+        .iphone-max-choosebutton-storage-fiveonetwo{
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(104, 104, 104);
+            background-color: rgb(212, 251, 255);
+            border-radius: 10px;
+            margin: 20px;
         }
     </style>
 </head>
@@ -41,54 +344,126 @@
 
     <div class="ipadair">
         <div class="ipadair-pic">
-            <img src="" alt="">
+            <img src="./ipad-air-all.jfif" alt="">
         </div>
         <div class="ipadair-choosebutton">
             <div class="ipadair-choosebutton-text">
-                <div class="ipadair-color">顏色</div>
+                <p class="ipadair-color">顏色</p>
             </div>
             <div class="ipadair-choosebutton-color">
-                <div class="ipadair-button-spacegray"></div>
-                <div class="ipadair-button-pink"></div>
-                <div class="ipadair-button-starlight"></div>
-                <div class="ipadair-button-blue"></div>
-                <div class="ipadair-button-purple"></div>
+                <button class="ipadair-button-spacegray">
+                    <p>太空灰色</p>
+                </button>
+                <button class="ipadair-button-pink">
+                    <p>粉紅色</p>
+                </button>
+                <button class="ipadair-button-starlight">
+                    <p>星光色</p>
+                </button>
+                <button class="ipadair-button-blue">
+                    <p>藍色</p>
+                </button>
+                <button class="ipadair-button-purple">
+                    <p>紫色</p>
+                </button>
+            </div>
+            <div class="ipadair-choosebutton-pic">
+                <img src="./ipad-air-space-gray.jfif" alt="">
+                <img src="./ipad-air-pink.jfif" alt="">
+                <img src="./ipad-air-starlight.jfif" alt="">
+                <img src="./ipad-air-blue.jfif" alt="">
+                <img src="./ipad-air-purple.jfif" alt="">
+            </div>
+            <div class="ipadair-choosebutton-storage">
+                <button class="ipadair-choosebutton-storage-sixfour">64GB</button>
+                <button class="ipadair-choosebutton-storage-twofivesix">256GB</button>
+            </div>
+            <div class="ipadair-choosebutton-network">
+                <button class="ipadair-choosebutton-network-wifi">Wi-Fi</button>
+                <button class="ipadair-choosebutton-network-mobile">Wi-Fi<br>+<br>行動網路</button>
+            </div>
+            <div class="ipadair-text">
+                <p></p>
             </div>
         </div>
     </div>
 
     <div class="iphone-min">
         <div class="iphone-min-pic">
-            <img src="" alt="">
+            <img src="./iphone-14-all.jfif" alt="">
         </div>
         <div class="iphone-min-choosebutton">
             <div class="iphone-min-choosebutton-text">
-                <div class="iphone-min-color">顏色</div>
+                <p class="iphone-min-color">顏色</p>
             </div>
             <div class="iphone-min-choosebutton-color">
-                <div class="iphone-min-button-blue"></div>
-                <div class="iphone-min-button-purple"></div>
-                <div class="iphone-min-button-midnight"></div>
-                <div class="iphone-min-button-starlight"></div>
-                <div class="iphone-min-button-red"></div>
+                <button class="iphone-min-button-blue">
+                    <p>藍色</p>
+                </button>
+                <button class="iphone-min-button-purple">
+                    <p>紫色</p>
+                </button>
+                <button class="iphone-min-button-midnight">
+                    <p>午夜色</p>
+                </button>
+                <button class="iphone-min-button-starlight">
+                    <p>星光色</p>
+                </button>
+                <button class="iphone-min-button-red">
+                    <p>紅色</p>
+                </button>
+            </div>
+            <div class="iphone-min-choosebutton-pic">
+                <img src="./iphone-14-blue.jfif" alt="">
+                <img src="./iphone-14-purple.jfif" alt="">
+                <img src="./iphone-14-midnight.jfif" alt="">
+                <img src="./iphone-14-starlight.jfif" alt="">
+                <img src="./iphone-14-red.jfif" alt="">
+            </div>
+            <div class="iphone-min-choosebutton-storage">
+                <button class="iphone-min-choosebutton-storage-onetwoeight">128GB</button>
+                <button class="iphone-min-choosebutton-storage-twofivesix">256GB</button>
+                <button class="iphone-min-choosebutton-storage-fiveonetwo">512GB</button>
             </div>
         </div>
     </div>
 
     <div class="iphone-max">
         <div class="iphone-max-pic">
-            <img src="" alt="">
+            <img src="./iphone-14-all.jfif" alt="">
         </div>
         <div class="iphone-max-choosebutton">
             <div class="iphone-max-choosebutton-text">
-                <div class="iphone-max-color">顏色</div>
+                <p class="iphone-max-color">顏色</p>
             </div>
             <div class="iphone-max-choosebutton-color">
-                <div class="iphone-min-button-blue"></div>
-                <div class="iphone-min-button-purple"></div>
-                <div class="iphone-min-button-midnight"></div>
-                <div class="iphone-min-button-starlight"></div>
-                <div class="iphone-max-button-red"></div>
+                <button class="iphone-max-button-blue">
+                    <p>藍色</p>
+                </button>
+                <button class="iphone-max-button-purple">
+                    <p>紫色</p>
+                </button>
+                <button class="iphone-max-button-midnight">
+                    <p>午夜色</p>
+                </button>
+                <button class="iphone-max-button-starlight">
+                    <p>星光色</p>
+                </button>
+                <button class="iphone-max-button-red">
+                    <p>紅色</p>
+                </button>
+            </div>
+            <div class="iphone-max-choosebutton-pic">
+                <img src="./iphone-14-plus-blue.jfif" alt="">
+                <img src="./iphone-14-plus-purple.jfif" alt="">
+                <img src="./iphone-14-plus-midnight.jfif" alt="">
+                <img src="./iphone-14-plus-starlight.jfif" alt="">
+                <img src="./iphone-14-plus-red.jfif" alt="">
+            </div>
+            <div class="iphone-max-choosebutton-storage">
+                <button class="iphone-max-choosebutton-storage-onetwoeight">128GB</button>
+                <button class="iphone-max-choosebutton-storage-twofivesix">256GB</button>
+                <button class="iphone-max-choosebutton-storage-fiveonetwo">512GB</button>
             </div>
         </div>
     </div>
@@ -158,7 +533,28 @@
 
         // let ipad = ipadairArray.filter(x => x.color == "spacegray" && x.storage == "64GB" && x.network == "Wi-Fi")[0];
 
-        document.write(JSON.stringify(ipad));
+        // document.write(JSON.stringify(ipad));
+
+    </script>
+
+    <script>
+        let ipadairtext,iphonemintext,iphonemaxtext;
+
+        ipadairtext = document.querySelector('.ipad-air-text');
+        iphonemintext = document.querySelector('.iphone-min-text');
+        iphonemaxtext = document.querySelector('.iphone-max-text');
+
+        ipadairtext.addEventListener('click', function(){
+
+        });
+
+        iphonemintext.addEventListener('click',function(){
+
+        });
+
+        iphonemaxtext.addEventListener('click',function(){
+
+        });
 
     </script>
 </body>
