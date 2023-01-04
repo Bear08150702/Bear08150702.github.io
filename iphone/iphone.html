@@ -33,11 +33,12 @@
             margin: 15px;
             padding: 10px;
         }
+        /* #region ipad-air */
         .ipadair{
             width: calc(100% - 40px);
-            /* display: flex; */
+            display: flex;
             display: none;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             justify-content: center;
             align-items: center;
             margin-left: 20px;
@@ -138,8 +139,8 @@
             border-radius: 10px;
             margin: 20px;
         }
-
-
+        /* #endregion */
+        /* #region iphone-min */
         .iphone-min{
             width: calc(100% - 40px);
             /* display: flex; */
@@ -234,7 +235,8 @@
             border-radius: 10px;
             margin: 20px;
         }
-
+        /* #endregion */
+        /* #region iphone-max */
         .iphone-max{
             width: calc(100% - 40px);
             /* display: flex; */
@@ -329,6 +331,7 @@
             border-radius: 10px;
             margin: 20px;
         }
+        /* #endregion */
     </style>
 </head>
 
@@ -341,7 +344,8 @@
         <button class="iphone-min-text">Iphone 14</button>
         <button class="iphone-max-text">Iphone 14 Plus</button>
     </div>
-
+    <!-- 給一個空的圖片路徑 後面可以塞路徑進去換照片 -->
+    
     <div class="ipadair">
         <div class="ipadair-pic">
             <img src="./ipad-air-all.jfif" alt="">
