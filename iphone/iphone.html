@@ -36,7 +36,7 @@
         /* #region ipad-air */
         .ipadair{
             width: calc(100% - 40px);
-            display: flex;
+            /* display: flex; */
             display: none;
             /* flex-wrap: wrap; */
             justify-content: center;
@@ -44,31 +44,35 @@
             margin-left: 20px;
             margin-right: 20px;
         }
+        .ipadair-flex{
+            display: flex;
+        }
         .ipadair-pic{
             width: calc(50% - 15px);
         }
         .ipadair-pic img{
             width: 100%;
+            border-radius: 50px;
         }
-        .ipadair-choosebutton{
+        .ipadair-choose-button{
             width: calc(50% - 15px);
         }
-        .ipadair-choosebutton-text{
+        .ipadair-choose-button-text{
             width: 100%;
             display: flex;
             justify-content: center;
             /* margin-bottom: 20px; */
         }
-        .ipadair-choosebutton-text p{
+        .ipadair-choose-button-text p{
             font-size: 30px;
             color: rgb(90, 90, 90);
         } 
-        .ipadair-choosebutton-color{
+        .ipadair-choose-button-color{
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .ipadair-choosebutton-pic{
+        .ipadair-choose-button-pic{
             display: none;
         }
         .ipadair-button-spacegray{
@@ -111,33 +115,50 @@
             border-radius: 50%;
             margin: 5px;
         }
-        .ipadair-choosebutton-storage{
+        .ipadair-choose-button-storage{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .ipadair-choosebutton-storage-sixfour,
-        .ipadair-choosebutton-storage-twofivesix{
-            width: 100px;
-            height: 50px;
+        .ipadair-choose-button-storage-sixfour,
+        .ipadair-choose-button-network-wifi,
+        .ipadair-choose-button-storage-twofivesix,
+        .ipadair-choose-button-network-mobile{
+            width: 120px;
+            height: 70px;
             border: 1px solid rgb(104, 104, 104);
             background-color: rgb(212, 251, 255);
             border-radius: 10px;
-            margin: 20px;
+            margin: 10px;
         }
-        .ipadair-choosebutton-network{
+        .ipadair-choose-button-network{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .ipadair-choosebutton-network-wifi,
-        .ipadair-choosebutton-network-mobile{
+        /* .ipadair-choose-button-network-wifi,
+        .ipadair-choose-button-network-mobile{
             width: 100px;
             height: 70px;
             border: 1px solid rgb(104, 104, 104);
             background-color: rgb(212, 251, 255);
             border-radius: 10px;
             margin: 20px;
+        } */
+        .ipadair-total-text{
+            margin-left: 30px;       
+            color: rgb(92, 0, 179); 
+        }
+        .ipadair-color-p{
+            display: flex;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .ipadair-storage-p{
+            display: flex;
+            margin: 10px;
+            line-height: 30px;
+            font-size: 20px;
         }
         /* #endregion */
         /* #region iphone-min */
@@ -151,31 +172,35 @@
             margin-left: 20px;
             margin-right: 20px;
         }
+        .iphone-min-flex{
+            display: flex;
+        }
         .iphone-min-pic{
             width: calc(50% - 15px);
         }
         .iphone-min-pic img{
             width: 100%;
+            border-radius: 50px;
         }
-        .iphone-min-choosebutton{
+        .iphone-min-choose-button{
             width: calc(50% - 15px);
         }
-        .iphone-min-choosebutton-text{
+        .iphone-min-choose-button-text{
             width: 100%;
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
         }
-        .iphone-min-choosebutton-text p{
+        .iphone-min-choose-button-text p{
             font-size: 30px;
             color: rgb(90, 90, 90);
         }
-        .iphone-min-choosebutton-color{
+        .iphone-min-choose-button-color{
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .iphone-min-choosebutton-pic{
+        .iphone-min-choose-button-pic{
             display: none;
         }
         .iphone-min-button-blue{
@@ -220,20 +245,35 @@
             margin: 5px;
             color: white;
         }
-        .iphone-min-choosebutton-storage{
+        .iphone-min-choose-button-storage{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .iphone-min-choosebutton-storage-onetwoeight,
-        .iphone-min-choosebutton-storage-twofivesix,
-        .iphone-min-choosebutton-storage-fiveonetwo{
+        .iphone-min-choose-button-storage-onetwoeight,
+        .iphone-min-choose-button-storage-twofivesix,
+        .iphone-min-choose-button-storage-fiveonetwo{
             width: 100px;
             height: 50px;
             border: 1px solid rgb(104, 104, 104);
             background-color: rgb(212, 251, 255);
             border-radius: 10px;
             margin: 20px;
+        }
+        .iphone-min-total-text{
+            margin-left: 30px;
+            color: rgb(92, 0, 179);            
+        }
+        .iphone-min-color-p{
+            display: flex;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .iphone-min-storage-p{
+            display: flex;
+            margin: 10px;
+            line-height: 30px;
+            font-size: 20px;
         }
         /* #endregion */
         /* #region iphone-max */
@@ -247,31 +287,35 @@
             margin-left: 20px;
             margin-right: 20px;
         }
+        .iphone-max-flex{
+            display: flex;
+        }
         .iphone-max-pic{
             width: calc(50% - 15px);
         }
         .iphone-max-pic img{
             width: 100%;
+            border-radius: 50px;
         }
-        .iphone-max-choosebutton{
+        .iphone-max-choose-button{
             width: calc(50% - 15px);
         }
-        .iphone-max-choosebutton-text{
+        .iphone-max-choose-button-text{
             width: 100%;
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
         }
-        .iphone-max-choosebutton-text p{
+        .iphone-max-choose-button-text p{
             font-size: 30px;
             color: rgb(90, 90, 90);
         }
-        .iphone-max-choosebutton-color{
+        .iphone-max-choose-button-color{
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .iphone-max-choosebutton-pic{
+        .iphone-max-choose-button-pic{
             display: none;
         }
         .iphone-max-button-blue{
@@ -316,20 +360,35 @@
             margin: 5px;
             color: white;
         }
-        .iphone-max-choosebutton-storage{
+        .iphone-max-choose-button-storage{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .iphone-max-choosebutton-storage-onetwoeight,
-        .iphone-max-choosebutton-storage-twofivesix,
-        .iphone-max-choosebutton-storage-fiveonetwo{
+        .iphone-max-choose-button-storage-onetwoeight,
+        .iphone-max-choose-button-storage-twofivesix,
+        .iphone-max-choose-button-storage-fiveonetwo{
             width: 100px;
             height: 50px;
             border: 1px solid rgb(104, 104, 104);
             background-color: rgb(212, 251, 255);
             border-radius: 10px;
             margin: 20px;
+        }
+        .iphone-max-total-text{
+            margin-left: 30px;
+            color: rgb(92, 0, 179);            
+        }
+        .iphone-max-color-p{
+            display: flex;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .iphone-max-storage-p{
+            display: flex;
+            margin: 10px;
+            line-height: 30px;
+            font-size: 20px;
         }
         /* #endregion */
     </style>
@@ -344,17 +403,20 @@
         <button class="iphone-min-text">Iphone 14</button>
         <button class="iphone-max-text">Iphone 14 Plus</button>
     </div>
+    <div class="title-pic">
+        <img src="" alt="">
+    </div>
     <!-- 給一個空的圖片路徑 後面可以塞路徑進去換照片 -->
     
     <div class="ipadair">
         <div class="ipadair-pic">
             <img src="./ipad-air-all.jfif" alt="">
         </div>
-        <div class="ipadair-choosebutton">
-            <div class="ipadair-choosebutton-text">
+        <div class="ipadair-choose-button">
+            <div class="ipadair-choose-button-text">
                 <p class="ipadair-color">顏色</p>
             </div>
-            <div class="ipadair-choosebutton-color">
+            <div class="ipadair-choose-button-color">
                 <button class="ipadair-button-spacegray">
                     <p>太空灰色</p>
                 </button>
@@ -371,23 +433,43 @@
                     <p>紫色</p>
                 </button>
             </div>
-            <div class="ipadair-choosebutton-pic">
+            <div class="ipadair-choose-button-pic">
                 <img src="./ipad-air-space-gray.jfif" alt="">
                 <img src="./ipad-air-pink.jfif" alt="">
                 <img src="./ipad-air-starlight.jfif" alt="">
                 <img src="./ipad-air-blue.jfif" alt="">
                 <img src="./ipad-air-purple.jfif" alt="">
             </div>
-            <div class="ipadair-choosebutton-storage">
-                <button class="ipadair-choosebutton-storage-sixfour">64GB</button>
-                <button class="ipadair-choosebutton-storage-twofivesix">256GB</button>
+            <div class="ipadair-choose-button-storage">
+                <button class="ipadair-choose-button-storage-sixfour">
+                <p>64GB</p>
+                <p>+</p>
+                <p>Wi-Fi</p>
+            </button>
+                <button class="ipadair-choose-button-network-wifi">
+                <p>64GB</p>
+                <p>+</p>
+                <p>Wi-Fi & 行動網路</p>
+            </button>
+                <button class="ipadair-choose-button-storage-twofivesix">
+                    <p>256GB</p>
+                    <p>+</p>
+                    <p>Wi-Fi</p>
+                </button>
+                <button class="ipadair-choose-button-network-mobile">
+                    <p>256GB</p>
+                    <p>+</p>
+                    <p>Wi-Fi&行動網路</p>
+                </button>
             </div>
-            <div class="ipadair-choosebutton-network">
-                <button class="ipadair-choosebutton-network-wifi">Wi-Fi</button>
-                <button class="ipadair-choosebutton-network-mobile">Wi-Fi<br>+<br>行動網路</button>
-            </div>
-            <div class="ipadair-text">
-                <p></p>
+            <!-- <div class="ipadair-choose-button-network">
+                <button class="ipadair-choose-button-network-wifi">Wi-Fi</button>
+                <button class="ipadair-choose-button-network-mobile">Wi-Fi<br>+<br>行動網路</button>
+            </div> -->
+            <div class="ipadair-total-text">
+                <p class="ipadair-color-p"></p>
+                <p class="ipadair-storage-p"></p>
+                <!-- <p class="ipadair-network-p"></p> -->
             </div>
         </div>
     </div>
@@ -396,11 +478,11 @@
         <div class="iphone-min-pic">
             <img src="./iphone-14-all.jfif" alt="">
         </div>
-        <div class="iphone-min-choosebutton">
-            <div class="iphone-min-choosebutton-text">
+        <div class="iphone-min-choose-button">
+            <div class="iphone-min-choose-button-text">
                 <p class="iphone-min-color">顏色</p>
             </div>
-            <div class="iphone-min-choosebutton-color">
+            <div class="iphone-min-choose-button-color">
                 <button class="iphone-min-button-blue">
                     <p>藍色</p>
                 </button>
@@ -417,17 +499,21 @@
                     <p>紅色</p>
                 </button>
             </div>
-            <div class="iphone-min-choosebutton-pic">
+            <div class="iphone-min-choose-button-pic">
                 <img src="./iphone-14-blue.jfif" alt="">
                 <img src="./iphone-14-purple.jfif" alt="">
                 <img src="./iphone-14-midnight.jfif" alt="">
                 <img src="./iphone-14-starlight.jfif" alt="">
                 <img src="./iphone-14-red.jfif" alt="">
             </div>
-            <div class="iphone-min-choosebutton-storage">
-                <button class="iphone-min-choosebutton-storage-onetwoeight">128GB</button>
-                <button class="iphone-min-choosebutton-storage-twofivesix">256GB</button>
-                <button class="iphone-min-choosebutton-storage-fiveonetwo">512GB</button>
+            <div class="iphone-min-choose-button-storage">
+                <button class="iphone-min-choose-button-storage-onetwoeight">128GB</button>
+                <button class="iphone-min-choose-button-storage-twofivesix">256GB</button>
+                <button class="iphone-min-choose-button-storage-fiveonetwo">512GB</button>
+            </div>
+            <div class="iphone-min-total-text">
+                <p class="iphone-min-color-p"></p>
+                <p class="iphone-min-storage-p"></p>
             </div>
         </div>
     </div>
@@ -436,11 +522,11 @@
         <div class="iphone-max-pic">
             <img src="./iphone-14-all.jfif" alt="">
         </div>
-        <div class="iphone-max-choosebutton">
-            <div class="iphone-max-choosebutton-text">
+        <div class="iphone-max-choose-button">
+            <div class="iphone-max-choose-button-text">
                 <p class="iphone-max-color">顏色</p>
             </div>
-            <div class="iphone-max-choosebutton-color">
+            <div class="iphone-max-choose-button-color">
                 <button class="iphone-max-button-blue">
                     <p>藍色</p>
                 </button>
@@ -457,110 +543,34 @@
                     <p>紅色</p>
                 </button>
             </div>
-            <div class="iphone-max-choosebutton-pic">
+            <div class="iphone-max-choose-button-pic">
                 <img src="./iphone-14-plus-blue.jfif" alt="">
                 <img src="./iphone-14-plus-purple.jfif" alt="">
                 <img src="./iphone-14-plus-midnight.jfif" alt="">
                 <img src="./iphone-14-plus-starlight.jfif" alt="">
                 <img src="./iphone-14-plus-red.jfif" alt="">
             </div>
-            <div class="iphone-max-choosebutton-storage">
-                <button class="iphone-max-choosebutton-storage-onetwoeight">128GB</button>
-                <button class="iphone-max-choosebutton-storage-twofivesix">256GB</button>
-                <button class="iphone-max-choosebutton-storage-fiveonetwo">512GB</button>
+            <div class="iphone-max-choose-button-storage">
+                <button class="iphone-max-choose-button-storage-onetwoeight">128GB</button>
+                <button class="iphone-max-choose-button-storage-twofivesix">256GB</button>
+                <button class="iphone-max-choose-button-storage-fiveonetwo">512GB</button>
+            </div>
+            <div class="iphone-max-total-text">
+                <p class="iphone-max-color-p"></p>
+                <p class="iphone-max-storage-p"></p>
             </div>
         </div>
     </div>
 
 
-    <script>
-
-        let ipadairArray = [
-            { id: "A0001", color: "spacegray", storage: "64GB", network: "Wi-Fi", price: 19900, description: "太空灰 Wi-Fi", picture: "ipadair-spacegray.jpg" },
-            { id: "A0002", color: "spacegray", storage: "64GB", network: "5G", price: 24900, description: "太空灰 5G", picture: "ipadair-spacegray.jpg" },
-            { id: "A0003", color: "spacegray", storage: "256GB", network: "Wi-Fi", price: 24900, description: "太空灰 Wi-Fi", picture: "ipadair-spacegray.jpg" },
-            { id: "A0004", color: "spacegray", storage: "256GB", network: "5G", price: 29900, description: "太空灰 5G", picture: "ipadairspacegray.jpg" },
-            { id: "A0005", color: "pink", storage: "64GB", network: "Wi-Fi", price: 19900, description: "粉紅色 Wi-Fi", picture: "ipadair-pink.jpg" },
-            { id: "A0006", color: "pink", storage: "64GB", network: "5G", price: 24900, description: "粉紅色 5G", picture: "ipadair-pink.jpg" },
-            { id: "A0007", color: "pink", storage: "256GB", network: "Wi-Fi", price: 24900, description: "粉紅色 Wi-Fi", picture: "ipadair-pink.jpg" },
-            { id: "A0008", color: "pink", storage: "256GB", network: "5G", price: 29900, description: "粉紅色 5G", picture: "ipadair-pink.jpg" },
-            { id: "A0009", color: "starlight", storage: "64GB", network: "Wi-Fi", price: 19900, description: "星光色 Wi-Fi", picture: "ipadair-starlight.jpg" },
-            { id: "A00010", color: "starlight", storage: "64GB", network: "5G", price: 24900, description: "星光色 5G", picture: "ipadair-starlight.jpg" },
-            { id: "A00011", color: "starlight", storage: "256GB", network: "Wi-Fi", price: 24900, description: "星光色 Wi-Fi", picture: "ipadair-starlight.jpg" },
-            { id: "A00012", color: "starlight", storage: "256GB", network: "5G", price: 29900, description: "星光色 5G", picture: "ipadair-starlight.jpg" },
-            { id: "A00013", color: "blue", storage: "64GB", network: "Wi-Fi", price: 19900, description: "藍色 Wi-Fi", picture: "ipadair-blue.jpg" },
-            { id: "A00014", color: "blue", storage: "64GB", network: "5G", price: 24900, description: "藍色 5G", picture: "ipadair-blue.jpg" },
-            { id: "A00015", color: "blue", storage: "256GB", network: "Wi-Fi", price: 24900, description: "藍色 Wi-Fi", picture: "ipadair-blue.jpg" },
-            { id: "A00016", color: "blue", storage: "256GB", network: "5G", price: 29900, description: "藍色 5G", picture: "ipadair-blue.jpg" },
-            { id: "A00017", color: "purple", storage: "64GB", network: "Wi-Fi", price: 19900, description: "紫色 Wi-Fi", picture: "ipadair-purple.jpg" },
-            { id: "A00018", color: "purple", storage: "64GB", network: "5G", price: 24900, description: "紫色 5G", picture: "ipadair-purple.jpg" },
-            { id: "A00019", color: "purple", storage: "256GB", network: "Wi-Fi", price: 24900, description: "紫色 Wi-Fi", picture: "ipadair-purple.jpg" },
-            { id: "A00020", color: "purple", storage: "256GB", network: "5G", price: 29900, description: "紫色 5G", picture: "ipadair-purple.jpg" },
-        ];
-
-        let iphoneArray = [
-            { id: "A0001", model: "iphone 14", color: "blue", storage: "128GB", price: 27900, description: " 藍色 128GB", picture: "iphone-blue.jpg" },
-            { id: "A0002", model: "iphone 14", color: "blue", storage: "256GB", price: 31400, description: " 藍色 256GB", picture: "iphone-blue.jpg" },
-            { id: "A0003", model: "iphone 14", color: "blue", storage: "512GB", price: 38400, description: " 藍色 512GB", picture: "iphone-blue.jpg" },
-            { id: "A0004", model: "iphone 14", color: "purple", storage: "128GB", price: 27900, description: " 紫色 128GB", picture: "iphone-purple.jpg" },
-            { id: "A0005", model: "iphone 14", color: "purple", storage: "256GB", price: 31400, description: " 紫色 256GB", picture: "iphone-purple.jpg" },
-            { id: "A0006", model: "iphone 14", color: "purple", storage: "512GB", price: 38400, description: " 紫色 512GB", picture: "iphone-purple.jpg" },
-            { id: "A0007", model: "iphone 14", color: "midnight", storage: "128GB", price: 27900, description: " 午夜色 128GB", picture: "iphone-midnight.jpg" },
-            { id: "A0008", model: "iphone 14", color: "midnight", storage: "256GB", price: 31400, description: " 午夜色 256GB", picture: "iphone-midnight.jpg" },
-            { id: "A0009", model: "iphone 14", color: "midnight", storage: "512GB", price: 38400, description: " 午夜色 512GB", picture: "iphone-midnight.jpg" },
-            { id: "A00010", model: "iphone 14", color: "starlight", storage: "128GB", price: 27900, description: " 星光色 128GB", picture: "iphone-starlight.jpg" },
-            { id: "A00011", model: "iphone 14", color: "starlight", storage: "256GB", price: 31400, description: " 星光色 256GB", picture: "iphone-starlight.jpg" },
-            { id: "A00012", model: "iphone 14", color: "starlight", storage: "512GB", price: 38400, description: " 星光色 512GB", picture: "iphone-starlight.jpg" },
-            { id: "A00013", model: "iphone 14", color: "red", storage: "128GB", price: 27900, description: " 紅色 128GB", picture: "iphone-red.jpg" },
-            { id: "A00014", model: "iphone 14", color: "red", storage: "256GB", price: 31400, description: " 紅色 256GB", picture: "iphone-red.jpg" },
-            { id: "A00015", model: "iphone 14", color: "red", storage: "512GB", price: 38400, description: " 紅色 512GB", picture: "iphone-red.jpg" },
-        ];
-
-        let iphonePlusArray = [
-            { id: "A0001", model: "iphone 14 Plus", color: "blue", storage: "128GB", price: 31900, description: " 藍色 128GB", picture: "iphone-blue.jpg" },
-            { id: "A0002", model: "iphone 14 Plus", color: "blue", storage: "256GB", price: 35400, description: " 藍色 256GB", picture: "iphone-blue.jpg" },
-            { id: "A0003", model: "iphone 14 Plus", color: "blue", storage: "512GB", price: 42400, description: " 藍色 512GB", picture: "iphone-blue.jpg" },
-            { id: "A0004", model: "iphone 14 Plus", color: "purple", storage: "128GB", price: 31900, description: " 紫色 128GB", picture: "iphone-purple.jpg" },
-            { id: "A0005", model: "iphone 14 Plus", color: "purple", storage: "256GB", price: 35400, description: " 紫色 256GB", picture: "iphone-purple.jpg" },
-            { id: "A0006", model: "iphone 14 Plus", color: "purple", storage: "512GB", price: 42400, description: " 紫色 512GB", picture: "iphone-purple.jpg" },
-            { id: "A0007", model: "iphone 14 Plus", color: "midnight", storage: "128GB", price: 31900, description: " 午夜色 128GB", picture: "iphone-midnight.jpg" },
-            { id: "A0008", model: "iphone 14 Plus", color: "midnight", storage: "256GB", price: 35400, description: " 午夜色 256GB", picture: "iphone-midnight.jpg" },
-            { id: "A0009", model: "iphone 14 Plus", color: "midnight", storage: "512GB", price: 42400, description: " 午夜色 512GB", picture: "iphone-midnight.jpg" },
-            { id: "A00010", model: "iphone 14 Plus", color: "starlight", storage: "128GB", price: 31900, description: " 星光色 128GB", picture: "iphone-starlight.jpg" },
-            { id: "A00011", model: "iphone 14 Plus", color: "starlight", storage: "256GB", price: 35400, description: " 星光色 256GB", picture: "iphone-starlight.jpg" },
-            { id: "A00012", model: "iphone 14 Plus", color: "starlight", storage: "512GB", price: 42400, description: " 星光色 512GB", picture: "iphone-starlight.jpg" },
-            { id: "A00013", model: "iphone 14 Plus", color: "red", storage: "128GB", price: 31900, description: " 紅色 128GB", picture: "iphone-red.jpg" },
-            { id: "A00014", model: "iphone 14 Plus", color: "red", storage: "256GB", price: 35400, description: " 紅色 256GB", picture: "iphone-red.jpg" },
-            { id: "A00015", model: "iphone 14 Plus", color: "red", storage: "512GB", price: 42400, description: " 紅色 512GB", picture: "iphone-red.jpg" },
-        ];
-
-
+    <script src="./iphone_three_array.js">
         // let ipad = ipadairArray.filter(x => x.color == "spacegray" && x.storage == "64GB" && x.network == "Wi-Fi")[0];
 
         // document.write(JSON.stringify(ipad));
 
     </script>
 
-    <script>
-        let ipadairtext,iphonemintext,iphonemaxtext;
-
-        ipadairtext = document.querySelector('.ipad-air-text');
-        iphonemintext = document.querySelector('.iphone-min-text');
-        iphonemaxtext = document.querySelector('.iphone-max-text');
-
-        ipadairtext.addEventListener('click', function(){
-
-        });
-
-        iphonemintext.addEventListener('click',function(){
-
-        });
-
-        iphonemaxtext.addEventListener('click',function(){
-
-        });
-
-    </script>
+    <script src="./iphone_script.js"></script>
 </body>
 
 </html>
