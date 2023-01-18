@@ -1,35 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2023 - Calendar</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-Calendar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a52a6bb6e0.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            width: 100%;
+            background-image: url(./11111.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* margin-bottom: 30px; */
+        }
+        .year-month {
+            font-size: 30px;
+        }
+        .btn i{
+            font-size: 40px;
+            color: rgb(129, 129, 129);
+        }
+        tr {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="year-month">0000年- 00月</div>
+    <div class="top">
+        <button class="btn" onclick="previousMonth()"><i class="fa-solid fa-caret-left"></i></button>
+        <div class="year-month">0000年 - 00月</div>
+        <button class="btn" onclick="nextMonth()"><i class="fa-solid fa-caret-right"></i></button>
+    </div>
     <table class="table">
-        <thead>
-            <tr>
-                <th>日</th>
-                <th>一</th>
-                <th>二</th>
-                <th>三</th>
-                <th>四</th>
-                <th>五</th>
-                <th>六</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- 動態渲染日期 -->
-        </tbody>
+    <thead>
+        <tr>
+            <th>日</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+            <th>六</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- JS 渲染日期 -->
+    </tbody>
     </table>
-
-    <button onclick="previousMonth()" class="btn btn-primary">往上月</button>
-    <button onclick="nextMonth()" class="btn btn-primary">往下月</button>
 
     <!-- 新增行程Modal fade是用來有滑動效果 -->
     <div id="add-modal" class="modal fade" tabindex="-1">
@@ -71,17 +112,20 @@
     </div>
 
 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    </script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
 
     <script>
         // 宣告
-        const today = new Date() //今天
-        let year = today.getFullYear() // 年
-        let month = today.getMonth() // 月份 1月是0
+        const today = new Date() // 取得今天的日期
+        let year = today.getFullYear() // 取得現在年份
+        let month = today.getMonth() // 取得現在月份 但從0開始 1月為0
         let currentIndex
+
         // DOM
         const yearMonthText = document.querySelector('.year-month')
         const dateArea = document.querySelector('tbody')
@@ -94,15 +138,16 @@
         const editDateInput = document.querySelector('#edit-date')
         const editValueInput = document.querySelector('#edit-date')
 
-        // function
+        // Function
         function renderDate() {
             dateArea.innerHTML = ''
 
             yearMonthText.innerText = `${year}年 - ${month + 1}月`
 
-            // 這個月第一天禮拜幾?
+            // 這裡month + 1 是因為 getMonth() 這個方法從 0 開始
             let firstDay = new Date(year, month, 1).getDay()
-            // 這個月有幾天?
+            
+            // .getDay() 可以獲得今天禮拜幾 第一天禮拜幾之意
             let dayOfMonth = new Date(year, month + 1, 0).getDate()
 
             let rows = Math.ceil((dayOfMonth + firstDay) / 7)
@@ -195,11 +240,11 @@
             let todoList = []
 
             // 去確認這天有沒有行程 這裡key 是日期
-            if (localStorage.getItem(date) == null){
+            if (localStorage.getItem(date) == null) {
                 todoList.push(todoObj)
             }
             // 如果有的化纖取出來在新增進去
-            else{
+            else {
                 todoList = JSON.parse(localStorage.getItem(date))
                 todoList.push(todoObj)
             }
@@ -209,24 +254,6 @@
             bootstrap.Modal.getOrCreateInstance(addModal).hide()
 
             renderDate()
-
-            // let todoArr = [
-            //     {
-            //         title: '倒垃圾',
-            //         startTime: '18:00',
-            //         endTime: '20:00'
-            //     },
-            //     {
-            //         title: '倒垃圾',
-            //         startTime: '18:00',
-            //         endTime: '20:00'
-            //     },
-            //     {
-            //         title: '倒垃圾',
-            //         startTime: '18:00',
-            //         endTime: '20:00'
-            //     }
-            // ] 
         }
 
         // 編輯的方法
@@ -262,12 +289,10 @@
         }
 
 
-        // windoe.onlond
         window.onload = function () {
             renderDate()
         }
     </script>
-
 </body>
 
 </html>
